@@ -3,7 +3,8 @@ cmake_minimum_required(VERSION 3.18.4)
 set(This tests)
 
 set(Sources
-    ExampleTest.cpp
+    ../Bufor.cpp
+    BuforTest.cpp
 )
 
 add_executable(${This} ${Sources})
@@ -21,3 +22,4 @@ add_test(
 )
 
 execute_process(COMMAND test/tests)
+
