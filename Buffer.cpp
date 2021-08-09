@@ -1,13 +1,13 @@
 #pragma once
 #include <utility>
-#include "Bufor.hpp"
+#include "Buffer.hpp"
 
-bool Bufor::setSize(Size _size){
+bool Buffer::setSize(Size _size){
     size = _size;
     return true;
 }
 
-Size Bufor::getSize(){
+Size Buffer::getSize(){
     return size;
 }
 

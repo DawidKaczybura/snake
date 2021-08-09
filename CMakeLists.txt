@@ -10,11 +10,11 @@
  add_subdirectory(googletest)
 
  set(Headers
-    Bufor.hpp
+    Buffer.hpp
  )
 
  set(Sources
-    Bufor.cpp
+    Buffer.cpp
     main.cpp
  )
 

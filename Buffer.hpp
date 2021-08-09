@@ -3,7 +3,7 @@
 
 using Size = std::pair<int, int>;
 
-class Bufor{
+class Buffer{
     public:
         bool setSize(Size _size);
         Size getSize();

@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.18.4)
 set(This tests)
 
 set(Sources
-    ../Bufor.cpp
-    BuforTest.cpp
+    ../Buffer.cpp
+    BufferTest.cpp
 )
 
 add_executable(${This} ${Sources})

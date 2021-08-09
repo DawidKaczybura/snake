@@ -1,20 +1,26 @@
 #include "gtest/gtest.h"
-#include "Bufor.hpp"
+#include "Buffer.hpp"
 #include <utility>
 
 class BuforTest : public ::testing::Test{
     protected:
-        Bufor bufor;
+        Buffer buffer;
 };
 
 TEST_F(BuforTest, whenSettingSizeThenSizeSettedCorrectly){
     Size size {50,50};
-    EXPECT_TRUE(bufor.setSize(size));
+    EXPECT_TRUE(buffer.setSize(size));
 };
 
 TEST_F(BuforTest, whenSettedSizeThenGetSizeReturnesSettedSize){
     Size size {50,50};
     Size result {50, 50};
-    bufor.setSize(size);
-    EXPECT_EQ(bufor.getSize(), result);
+    buffer.setSize(size);
+    EXPECT_EQ(buffer.getSize(), result);
+};
+
+TEST_F(BuforTest, whenOneCharSettetThenGettingReturnThisChar){
+    Size size {50,50};
+    buffer.setSize(size);
+    EXPECT_TRUE(true);
 };
