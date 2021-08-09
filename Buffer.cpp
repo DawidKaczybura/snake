@@ -11,3 +11,10 @@ Size Buffer::getSize(){
     return size;
 }
 
+bool Buffer::setCharAt(Position pos, char c){
+    return true;
+}
+char Buffer::getCharAt(Position pos){
+    return 'a';
+}
+

@@ -22,5 +22,8 @@ TEST_F(BuforTest, whenSettedSizeThenGetSizeReturnesSettedSize){
 TEST_F(BuforTest, whenOneCharSettetThenGettingReturnThisChar){
     Size size {50,50};
     buffer.setSize(size);
-    EXPECT_TRUE(true);
+
+    Position pos{25, 25};
+    EXPECT_TRUE(buffer.setCharAt(pos, 'a'));
+    EXPECT_EQ(buffer.getCharAt(pos), 'a');
 };
