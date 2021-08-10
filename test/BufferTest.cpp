@@ -4,26 +4,24 @@
 
 class BuforTest : public ::testing::Test{
     protected:
-        Buffer buffer;
-};
-
-TEST_F(BuforTest, whenSettingSizeThenSizeSettedCorrectly){
-    Size size {50,50};
-    EXPECT_TRUE(buffer.setSize(size));
+        Size size {10, 10};
+        Buffer buffer = Buffer(size);
 };
 
 TEST_F(BuforTest, whenSettedSizeThenGetSizeReturnesSettedSize){
-    Size size {50,50};
-    Size result {50, 50};
-    buffer.setSize(size);
-    EXPECT_EQ(buffer.getSize(), result);
+    EXPECT_EQ(buffer.getSize(), size);
 };
 
 TEST_F(BuforTest, whenOneCharSettetThenGettingReturnThisChar){
-    Size size {50,50};
-    buffer.setSize(size);
+    Position pos{5, 5};
+    EXPECT_TRUE(buffer.setCharAt(pos, 'b'));
+    EXPECT_EQ(buffer.getCharAt(pos), 'b');
+};
 
-    Position pos{25, 25};
-    EXPECT_TRUE(buffer.setCharAt(pos, 'a'));
-    EXPECT_EQ(buffer.getCharAt(pos), 'a');
+TEST_F(BuforTest, whenOneCharSettetThenGettingOneLineReturnesLineThatIncludeThisChar){
+    Position pos{5, 5};
+    buffer.setCharAt(pos, 'a');
+
+    std::string result = "     a    ";
+    EXPECT_EQ(buffer.getLineAt(5), result);
 };
