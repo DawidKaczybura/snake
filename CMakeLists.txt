@@ -11,10 +11,12 @@
 
  set(Headers
     Buffer.hpp
+    Dimension.hpp
  )
 
  set(Sources
     Buffer.cpp
+    Dimension.cpp
     main.cpp
  )
 
