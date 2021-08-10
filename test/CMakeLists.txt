@@ -5,7 +5,9 @@ set(This tests)
 set(Sources
     ../Buffer.cpp
     ../Dimension.cpp
+    ../Position.cpp
     DimensionTest.cpp
+    PositionTest.cpp
     BufferTest.cpp
 )
 

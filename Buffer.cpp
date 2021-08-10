@@ -1,20 +1,19 @@
 #pragma once
 #include "Buffer.hpp"
 
-
-Buffer::Buffer(Size _size){
-    setSize(_size);
-    initBuff();
+Buffer::Buffer(const Dimension& _dimension){
+    setDimension(_dimension);
 }
 
-bool Buffer::setSize(Size _size){
-    size = _size;
+bool Buffer::setDimension(Dimension _dimension){
+    dimension = _dimension;
     return true;
 }
 
-Size Buffer::getSize(){
-    return size;
+Dimension Buffer::getDimension(){
+    return dimension;
 }
+
 
 bool Buffer::setCharAt(Position pos, char c){
     buff.at(pos.first).at(pos.second) = c;
@@ -31,7 +30,7 @@ Line Buffer::getLineAt(int pos){
 
 Line Buffer::getEmptyLine(int length){
     Line line = "";
-    for(int i = 0; i < size.second; i++){
+    for(int i = 0; i < length; i++){
         line += " ";
     }
     return line;
@@ -39,8 +38,8 @@ Line Buffer::getEmptyLine(int length){
 
 void Buffer::initBuff(){
     buff.clear();
-    Line emptyLine = getEmptyLine(size.second);
-    for(int i = 0; i < size.first; i++){
+    Line emptyLine = getEmptyLine(dimension.width);
+    for(int i = 0; i < dimension.height; i++){
         buff.push_back(emptyLine);
     }
 }

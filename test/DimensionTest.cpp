@@ -9,7 +9,7 @@ class DimensionTest : public ::testing::Test{
 };
 
 TEST_F(DimensionTest, WhenDimensionObjectCreatedItsWidthAndHeightIsSetCorrectly){
-    EXPECT_TRUE(dimension.width == 10);
+    EXPECT_TRUE(dimension.width == width);
 };
 
 TEST_F(DimensionTest, CompareTwoDifferentObjectIfNotEqual){
