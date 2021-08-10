@@ -3,8 +3,9 @@
 #include <string>
 #include <vector>
 #include "Dimension.hpp"
+#include "Position.hpp"
 
-using Position = std::pair<int, int>;
+//using Position = std::pair<int, int>;
 using Line = std::string;
 using Buff = std::vector<Line>;
 
@@ -14,7 +15,7 @@ class Buffer{
         Dimension getDimension();
         bool setCharAt(Position pos, char c);
         char getCharAt(Position pos);
-        std::string getLineAt(int pos);
+        std::string getLineAt(int level);
         
     private:
         bool setDimension(Dimension _dimension);
