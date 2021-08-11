@@ -1,13 +1,14 @@
 #pragma once
+#include <memory>
 #include "Buffer.hpp"
+
+using BufferPtr = std::shared_ptr<Buffer>;
 
 class Display{
     public:
-        //bool initDisplay(int widht, int height);
-        Buffer getBuffer();
-        const int width = 30;
-        const int height = 30;
+        bool initDisplay(int _width, int _height);
+        BufferPtr getBuffer(); 
+
     private:
-        //Buffer* bufferPtr;
-        Buffer buffer = Buffer(width, height);
+        BufferPtr bufferPtr;
 };

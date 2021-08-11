@@ -1,7 +1,11 @@
 #include "Display.hpp"
 
+bool Display::initDisplay(int width, int height){
+    bufferPtr = BufferPtr(new Buffer(width, height));
+    return true;
+}
 
-Buffer Display::getBuffer(){ 
-    return buffer;
+BufferPtr Display::getBuffer(){ 
+    return bufferPtr;
 }
 
