@@ -7,6 +7,11 @@ Buffer::Buffer(const Dimension& _dimension){
     initBuff();
 }
 
+Buffer::Buffer(int width, int height){
+    setDimension(Dimension(height, width));
+    initBuff();
+}
+
 bool Buffer::setDimension(Dimension _dimension){
     dimension = _dimension;
     return true;
@@ -15,7 +20,6 @@ bool Buffer::setDimension(Dimension _dimension){
 Dimension Buffer::getDimension(){
     return dimension;
 }
-
 
 bool Buffer::setCharAt(Position pos, char c){
     buff.at(pos.y).at(pos.x) = c;

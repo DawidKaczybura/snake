@@ -5,10 +5,12 @@ set(This tests)
 set(Sources
     ../Buffer.cpp
     ../Dimension.cpp
+    ../Display.cpp
     ../Position.cpp
-    DimensionTest.cpp
-    PositionTest.cpp
     BufferTest.cpp
+    DimensionTest.cpp
+    DisplayTest.cpp
+    PositionTest.cpp
 )
 
 add_executable(${This} ${Sources})

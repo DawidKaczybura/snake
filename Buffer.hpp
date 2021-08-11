@@ -5,12 +5,12 @@
 #include "Dimension.hpp"
 #include "Position.hpp"
 
-//using Position = std::pair<int, int>;
 using Line = std::string;
 using Buff = std::vector<Line>;
 
 class Buffer{
     public:
+        Buffer(int width, int height);
         Buffer(const Dimension& _dimension);
         Dimension getDimension();
         bool setCharAt(Position pos, char c);
