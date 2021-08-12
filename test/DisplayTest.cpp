@@ -20,3 +20,4 @@ TEST_F(DisplayTest, WhenBufferIsInitializedThenWidhtAndHeightIsCorrect){
     Buffer* buff = display.getBuffer().get();
     EXPECT_EQ(buff->getDimension().width, width);
 }
+

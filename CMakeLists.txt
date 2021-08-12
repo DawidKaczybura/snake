@@ -28,5 +28,5 @@
  add_library(${This} STATIC ${Sources} ${Headers})
 
  add_subdirectory(test)
-
- add_executable(main ${PROJECT_SOURCE_DIR}/main.cpp)
+ add_executable(main ${Sources})
+ #add_executable(main ${PROJECT_SOURCE_DIR}/main.cpp)

@@ -1,8 +1,14 @@
 #include <iostream>
+#include "Display.hpp"
+
 
 int main(){
-    system("clear");
-    std::cout << "hello" << std::endl;
-    int a;
-    std::cin >> a;
+    Display display;
+
+    display.initDisplay(20,20);
+    display.clearScreen();
+    display.printBuffer();
+
+    display.clearScreen();
+    display.printBuffer();
 }
