@@ -15,7 +15,10 @@ void Display::printBuffer(){
     Buffer* buffer = bufferPtr.get();
     for(int i = 0; i<height; i++){
         std::cout << buffer->getLineAt(i) << std::endl;
+        //printf(buffer->getLineAt(i));
+        //printf("\n");
     }
+    //fflush()
 }
 
 BufferPtr Display::getBuffer(){ 
