@@ -1,5 +1,6 @@
 #pragma once
 #include <memory>
+#include <windows.h>
 #include "Buffer.hpp"
 
 using BufferPtr = std::shared_ptr<Buffer>;
@@ -11,6 +12,8 @@ class Display{
         void clearScreen();
         void printBuffer();
     private:
+        void hideCursor();
         BufferPtr bufferPtr;
         int height;
+        HANDLE consoleHandle;
 };
