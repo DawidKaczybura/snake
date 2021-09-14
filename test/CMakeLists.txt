@@ -4,6 +4,7 @@ set(This tests)
 
 set(Sources
     ../Buffer.cpp
+    ../Console.cpp
     ../Dimension.cpp
     ../Display.cpp
     ../Position.cpp

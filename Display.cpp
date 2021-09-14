@@ -23,7 +23,14 @@ void Display::clearScreen(){
     system("CLS");
 }
 
+void Display::resetCursorPosition(){
+    cursorPosition.X = 0;
+    cursorPosition.Y = 0;
+    SetConsoleCursorPosition(consoleHandle,cursorPosition);
+}
+
 void Display::printBuffer(){
+    resetCursorPosition();
     Buffer* buffer = bufferPtr.get();
     std::stringstream out;
     for(int i = 0; i<height; i++){

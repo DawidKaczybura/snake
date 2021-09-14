@@ -13,7 +13,10 @@ class Display{
     private:
         void clearScreen();
         void hideCursor();
+        void resetCursorPosition();
+
         BufferPtr bufferPtr;
         int height;
         HANDLE consoleHandle;
+        COORD cursorPosition;
 };

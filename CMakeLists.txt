@@ -11,6 +11,7 @@
 
  set(Headers
     Buffer.hpp
+    Console.hpp
     Dimension.hpp
     Display.hpp
     Position.hpp
@@ -18,6 +19,7 @@
 
  set(Sources
     Buffer.cpp
+    Console.cpp
     Dimension.cpp
     Display.cpp
     Position.cpp
