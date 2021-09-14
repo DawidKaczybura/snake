@@ -3,7 +3,9 @@
 
 
 int main(){
-    Display display(20, 20);
+    int width = 30;
+    int height = 20;
+    Display display(width, height);
 
     while(true)
     {

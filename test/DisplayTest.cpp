@@ -8,10 +8,4 @@ class DisplayTest : public ::testing::Test{
     Display display{width, height};
 };
 
-TEST_F(DisplayTest, WhenBufferIsInitializedThenWidhtAndHeightIsCorrect){
-    BufferPtr bufferPtr = display.getBuffer();
-    Buffer* buff = display.getBuffer().get();
-    EXPECT_EQ(buff->getDimension().width, width);
-    EXPECT_EQ(buff->getDimension().height, height);
-}
 

@@ -17,10 +17,6 @@ bool Buffer::setDimension(Dimension _dimension){
     return true;
 }
 
-Dimension Buffer::getDimension(){
-    return dimension;
-}
-
 bool Buffer::setCharAt(Position pos, char c){
     buff.at(pos.y).at(pos.x) = c;
     return true;

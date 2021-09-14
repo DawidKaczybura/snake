@@ -12,7 +12,6 @@ class Buffer{
     public:
         Buffer(int width, int height);
         Buffer(const Dimension& _dimension);
-        Dimension getDimension();
         bool setCharAt(Position pos, char c);
         char getCharAt(Position pos);
         std::string getLineAt(int level);
