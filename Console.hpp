@@ -4,8 +4,11 @@
 class Console{
     public:
         Console();
-        void printBuffer();
+        void resetCursorPosition();
     private:
         void clearScreen();
         void hideCursor();
+        
+        HANDLE consoleHandle;
+        COORD cursorPosition;
 };

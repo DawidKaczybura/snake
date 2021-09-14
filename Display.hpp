@@ -2,6 +2,7 @@
 #include <memory>
 #include <windows.h>
 #include "Buffer.hpp"
+#include "Console.hpp"
 
 using BufferPtr = std::shared_ptr<Buffer>;
 
@@ -11,12 +12,7 @@ class Display{
         BufferPtr getBuffer(); 
         void printBuffer();
     private:
-        void clearScreen();
-        void hideCursor();
-        void resetCursorPosition();
-
+        Console console;
         BufferPtr bufferPtr;
         int height;
-        HANDLE consoleHandle;
-        COORD cursorPosition;
 };
