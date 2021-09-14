@@ -37,3 +37,4 @@ TEST_F(BufferTest, whenConstructorWithHeightAndWidthUsedThenObjectCreatesCorrect
     Buffer buf = Buffer(width, height);
     EXPECT_EQ(buf.getDimension().height, height);
     EXPECT_EQ(buf.getDimension().width, width);
+};
