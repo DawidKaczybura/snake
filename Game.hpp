@@ -3,7 +3,6 @@
 
 class Game{
     public:
-        Game();
         void play();
     private:
         int width = 30;
