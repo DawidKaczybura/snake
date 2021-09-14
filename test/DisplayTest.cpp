@@ -3,21 +3,15 @@
 
 class DisplayTest : public ::testing::Test{
     protected:
-    Display display;
+    int width = 20;
+    int height = 20;
+    Display display{width, height};
 };
 
-TEST_F(DisplayTest, WhenInitializingDisplayTrueReturned){
-    int width = 20;
-    int height = 20;
-    EXPECT_TRUE(display.initDisplay(width, height));
-}
-
 TEST_F(DisplayTest, WhenBufferIsInitializedThenWidhtAndHeightIsCorrect){
-    int width = 20;
-    int height = 20;
-    display.initDisplay(width, height);
     BufferPtr bufferPtr = display.getBuffer();
     Buffer* buff = display.getBuffer().get();
     EXPECT_EQ(buff->getDimension().width, width);
+    EXPECT_EQ(buff->getDimension().height, height);
 }
 

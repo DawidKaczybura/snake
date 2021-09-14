@@ -12,17 +12,13 @@ COORD cursorPosition;
 
 
 int main(){
-    Display display;
+    Display display(20, 20);
 
-    display.initDisplay(20,20);
-    display.clearScreen();
     while(true)
     {
-        //display.clearScreen();
         cursorPosition.X = 0;
         cursorPosition.Y = 0;
         SetConsoleCursorPosition(console,cursorPosition); 
-        //std::cout<<"a"<<std::endl;
         display.printBuffer();
     }
 }
