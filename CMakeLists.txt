@@ -14,6 +14,7 @@
     Console.hpp
     Dimension.hpp
     Display.hpp
+    Game.hpp
     Position.hpp
  )
 
@@ -22,6 +23,7 @@
     Console.cpp
     Dimension.cpp
     Display.cpp
+    Game.cpp
     Position.cpp
     main.cpp
  )
